@@ -15,13 +15,13 @@ w = np.array([0.5, -0.5])
 
 # Calculate one gradient descent step for each weight
 # TODO: Calculate output of neural network
-nn_output = None
+nn_output = sigmoid(np.dot(x, w))
 
 # TODO: Calculate error of neural network
-error = None
+error = y - nn_output
 
 # TODO: Calculate change in weights
-del_w = None
+del_w = learnrate * error * nn_output * (1 - nn_output) * x
 
 print('Neural Network output:')
 print(nn_output)
